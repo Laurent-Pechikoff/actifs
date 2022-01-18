@@ -1,0 +1,36 @@
+<!-- **************************formulaire ajout commande********************** -->
+<h2 class="text-center">Passer une commande</h2>
+<form #commandForm= "ngForm" (ngSubmit)="ajouterCommande(commandForm)">
+    <div class="mb-3 row border border-solid">
+        <label for="nom" class="col-sm-2 col-form-label">Nom </label>
+        <div class="col-sm-10 border border-solid">
+            <input type="text" class="form-control-plaintext" name="nom"  ngModel required>
+        </div>
+    </div>
+    <div class="mb-3 row border border-solid">
+        <label for="Prenom" class="col-sm-2 col-form-label">Prenom</label>
+        <div class="col-sm-10 border border-solid">
+            <input type="text" class="form-control-plaintext" name="Prenom"  ngModel required >
+        </div>
+    </div>
+    <div class="mb-3 row border border-solid">
+        <label for="prix" class="col-sm-2 col-form-label border border-solid">Prix journalier</label>
+        <div class="col-sm-10 border border-solid">
+            <input type="number" class="form-control-plaintext" name="appartPrix" ngModel  required  >
+        </div>
+    </div>
+    <div class="mb-3 row border border-solid">
+        <label for="quantite" class="col-sm-2 col-form-label border border-solid">Durée du séjour (jour)</label>
+        <div class="col-sm-10 border border-solid">
+            <input type="number" class="form-control-plaintext" name="quantite" ngModel  required  >
+        </div>
+    </div>
+    <div class="mb-3 row border border-solid">
+        <label for="appartName" class="col-sm-2 col-form-label">Nom du bien réservé</label>
+        <div class="col-sm-10 border border-solid">
+            <input type="text" class="form-control-plaintext" name="appartName"  ngModel required >
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Valider la commande</button>
+    
+</form>

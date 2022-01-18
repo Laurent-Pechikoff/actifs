@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pre-appartement": {
+      "hosting": {
+        "actifs": [
+          "pre-appartement"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pre-appartement"
+  }
+}

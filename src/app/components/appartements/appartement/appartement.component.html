@@ -1,0 +1,34 @@
+<!-- **************************formulaire ajout appartement********************** -->
+<hr>
+<hr>
+
+<h2 class="text-center">Ajouter/modifier un appartement</h2>
+<form (ngSubmit)="ajouterAppart(appartForm)" #appartForm="ngForm">
+    <div class="mb-3 row border border-solid">
+        <label for="name" class="col-sm-2 col-form-label">Nom de l'appartement</label>
+        <div class="col-sm-10 border border-solid">
+            <input type="text" class="form-control-plaintext" name="name" [(ngModel)]="appartement.name" #name="ngModel" ngModel required>
+        </div>
+    </div>
+    <div class="mb-3 row border border-solid">
+        <label for="surface" class="col-sm-2 col-form-label">Surface</label>
+        <div class="col-sm-10 border border-solid">
+            <input type="number" class="form-control-plaintext" name="surface" [(ngModel)]="appartement.surface" #surface="ngModel" required ngModel>
+        </div>
+    </div>
+    <div class="mb-3 row border border-solid">
+        <label for="prix" class="col-sm-2 col-form-label border border-solid">Prix journalier</label>
+        <div class="col-sm-10 border border-solid">
+            <input type="number" class="form-control-plaintext" name="prix" [(ngModel)]="appartement.prix" value={{appartement.prix}} #prix="ngModel" required  ngModel>
+        </div>
+    </div>
+    <div class="mb-3 row border border-solid">
+        <label for="disponible" class="col-sm-2 col-form-label border border-solid">Disponibilité</label>
+        <div class="col-sm-10">
+            <input type="checkbox" class="form-control-plaintext border border-solid" name="disponible" [(ngModel)]="appartement.disponible" #disponible="ngModel" required  ngModel >
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Ajouter appartement</button>
+    <button  class="btn btn-primary" >Modifier appartement</button>
+    
+</form>

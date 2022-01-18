@@ -1,0 +1,26 @@
+<table class="table">
+    <thead >
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Nom appartement</th>
+        <th scope="col">Durée de la réservation</th>
+        <th scope="col">Prix journalier</th>
+        <th scope="col">Prix total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elt of commandes">
+        <th scope="row">{{elt.id}}</th>
+        <td>{{elt.nom}}</td>
+        <td>{{elt.Prenom}}</td>
+        <td>{{elt.appartName}}</td>
+        <td>{{elt.quantite}} jour(s)</td>
+        <td>{{elt.appartPrix}} euros</td>
+        <td>{{calculPrixTotal(elt.appartPrix, elt.quantite)}} euros</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>

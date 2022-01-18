@@ -1,0 +1,27 @@
+<table class="table">
+    <thead >
+      <tr >
+        <th scope="col">#</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Surface</th>
+        <th scope="col">Prix journalier</th>
+        <th scope="col">Disponibilité</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Suprimer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elt of appartements">
+        <th scope="row"></th>
+        <td>{{elt.name}}</td>
+        <td>{{elt.surface}}</td>
+        <td>{{elt.prix}}</td>
+        <td>{{elt.disponible}}</td>
+        <td><button class="btn btn-warning" (click)="modAppartement(elt)">Modifier</button></td>
+        <td><button class="btn btn-danger"(click)="suprimeAppartement(elt)">Suprimer</button></td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+

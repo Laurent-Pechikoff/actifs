@@ -1,0 +1,33 @@
+<hr>
+<h2 class="text-center">Liste des appartements</h2>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="card col-4"  *ngFor="let elt of appartements">
+            <img src="../../../assets/pictures/barbier.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Nom : {{elt.name}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Surface : {{elt.surface}} m²</li>
+                <li class="list-group-item">Prix journalier : {{elt.prix}} euros</li>
+                <li class="list-group-item">Disponibilité : {{elt.disponible}}</li>
+            </ul>
+            <div class="card-body">
+
+                <button class="btn btn-primary" (click)="afficheForm()" (click)="modAppartement(elt)">Reserver</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="afficherForm">
+    <div class="row">
+        <div class="col-12">
+            <app-commandes></app-commandes>
+        </div>
+    </div>
+</div>
